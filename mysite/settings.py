@@ -15,8 +15,9 @@ from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-#STATIC_ROOT = BASE_DIR / 'staticfiles'
-STATIC_ROOT = BASE_DIR / 'polls/static'
+#STATIC_ROOT = BASE_DIR / 'polls/static'
+STATIC_ROOT = os.path.join(BASE_DIR, 'polls/static')
+#MEDIA_ROOT = os.path.join(BASE_DIR, 'images')
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
@@ -25,7 +26,7 @@ STATIC_ROOT = BASE_DIR / 'polls/static'
 SECRET_KEY = 'django-insecure-u1@dbk@6=9#8u+j5$yhl5j3_uie-et2!1-fkyil!4+^mvzyrjv'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
